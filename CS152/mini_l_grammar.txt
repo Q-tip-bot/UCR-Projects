@@ -1,0 +1,48 @@
+# Here is the grammar we used for this part of the project
+
+Program:  	functions
+
+functions:      epsilon | function functions
+
+function:       FUNCTION ident SEMICOLON BEGIN_PARAMS declarations END_PARAMS BEGIN_LOCALS declarations END_LOCALS BEGIN_BODY statements END_BODY
+
+declarations:   epsilon | declaration SEMICOLON declarations
+
+declaration:    identifiers COLON INTEGER 
+                | identifiers COLON ARRAY L_SQUARE_BRACKET NUMBER R_SQUARE_BRACKET OF INTEGER
+
+identifiers:    ident | ident COMMA identifiers
+
+ident:          IDENT
+
+statements:     epsilon | statement SEMICOLON statements
+
+statement:      READ vars | WRITE vars | var ASSIGN expression | CONTINUE 
+		| IF bool_exp THEN statements ENDIF | IF bool_exp THEN statements ELSE statements ENDIF
+                | WHILE bool_exp BEGINLOOP statements ENDLOOP
+                | DO BEGINLOOP statements ENDLOOP WHILE bool_exp
+                | FOREACH ident IN ident BEGINLOOP statements ENDLOOP | RETURN expression
+
+bool_exp:       relation_and_exp | relation_and_exp OR bool_exp
+
+relation_and_exp:        relation_exp AND relation_and_exp | relation_exp | NOT relation_exps
+
+relation_exps:  expression comp expression | TRUE | FALSE | L_PAREN bool_exp R_PAREN
+
+comp:           EQ | NEQ | LT | GT | LTE | GTE
+
+expression:     multiplicative_expression | multiplicative_expression ADD expression
+                | multiplicative_expression SUB expression
+
+multiplicative_expression:      term | term MULT term | term DIV term | term MOD term
+
+term:           ident L_PAREN R_PAREN | ident L_PAREN term_expression R_PAREN | SUB terms | terms
+
+term_expression:        expression | expression COMMA term_expression
+
+terms:          var | NUMBER | L_PAREN expression R_PAREN
+
+vars:           var | var COMMA vars
+
+var:            ident | ident L_SQUARE_BRACKET expression R_SQUARE_BRACKET
+

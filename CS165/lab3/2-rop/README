@@ -1,0 +1,16 @@
+Lab03: rop
+=============
+
+  Make a simple ROP chain.
+  Call open_flag(), read_flag(), show_flag() with appropriate arguments.
+  
+  The target binary is:
+  
+      CANARY    : disabled
+      FORTIFY   : disabled
+      NX        : ENABLED
+      PIE       : disabled
+      RELRO     : Partial
+  
+  * Ref
+    - http://crypto.stanford.edu/~blynn/rop/

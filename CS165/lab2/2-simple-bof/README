@@ -1,0 +1,10 @@
+Lab2: simple-bof
+=================
+
+  Hijack the eip of start().
+  
+  * Refs
+  
+   - Smashing The Stack For Fun And Profit
+     (http://phrack.org/issues/49/14.html)
+

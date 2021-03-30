@@ -1,0 +1,6 @@
+Lab03: terminator
+=================
+
+  Four special chars--NULL(0x00), CR (0x0d), LF (0x0a) and EOF (0xff),
+  are effective combinations to mitigate stack overflow. Return
+  address can be overwritten but you should not kill the canary next by.

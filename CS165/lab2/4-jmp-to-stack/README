@@ -1,0 +1,9 @@
+Lab2: jmp-to-stack
+===================
+
+  Try?
+  
+  $ SHELLCODE="hi" ./target 1
+  
+  No more environment. What are the potental targets?
+

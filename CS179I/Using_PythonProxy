@@ -1,0 +1,18 @@
+How to use Python Proxy
+
+1) open a terminal and run the following
+	python PythonProxy.py
+2) After the proxy is running and verifies that it is running on port 8080 then start up Wireshark by running the following command in the terminal
+	sudo wireshark
+3) Within Wireshark make sure that you capture packets from 'any' interface and filter for http traffic
+4) To make an http request through the terminal use the following command:
+   curl -O -x localhost:8080 http://phrack.org/issues/49/14.html --output file.html
+	or
+   curl -x localhost:8080 http://www.freeimageslive.com/galleries/sports/relaxation/pics/beach_walk.jpg > image.jpg
+
+Here is the website with other useful Curl commands:
+https://www.thegeekstuff.com/2012/04/curl-examples/?utm_source=feedburner
+
+Sit that has files to test download speeds:
+http://www.engineerhammad.com/2015/04/Download-Test-Files.html
+	

@@ -1,0 +1,27 @@
+Lab2: shellcode32
+==================
+
+  This challenge helps you prepare shellcodes on x86 (32-bit) architecture,
+  which is a basic step toward writing an advanced exploitation. Write a
+  shellcode (asm!) that reads a flag from the flag file!
+  
+   ; build
+   $ ./make.sh
+  
+   ; shellcode to launch
+   $ objdump -m i386 -D -b binary shellcode.bin
+  
+   ; fire
+   $ (cat shellcode.bin; echo; cat) | ./test_your_shellcode
+   ...
+   cat flag
+   ^D (Ctl-D to exit)
+  
+   Unfortunately that is not your solution. Please write a payload
+   (readflag.S) that directly reads the flag from the file,
+  
+   ; run your shellcode
+   $ cat readflag.bin | ./target 
+  
+   NOTE: you can only use 'open', 'read', and, 'write' system call.
+
