@@ -1,0 +1,14 @@
+Using Mininet
+
+1) Type 'VirtualBox' in the terminal
+2) Launch the Mininet VM and login with username: mininet, password: mininet
+3) Open another terminal and use the following command to ssh to the VM:
+	ssh -X mininet@mininet-vm
+4) Once you have ssh'd into the VM use 'xterm' to open a terminal
+
+
+Downloading MPTCP
+
+1) Go to https://multipath-tcp.org/pmwiki.php/Users/AptRepository
+2) Run the older steps to get the public key
+3) add one of the files to the source.list file in /etc/apt/ directory
